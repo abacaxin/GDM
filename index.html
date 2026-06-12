@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora Boutique — Perfumes, Acessórios & Maquiagem</title>
+  <link rel="icon" type="image/x-icon" href="ft.img/logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── --> 
+  <nav id="navbar">
+    <div class="nav-logo">
+      <img src="ft.img/flora_boutique_texto.svg" alt="Flora Boutique">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#categorias">Categorias</a></li>
+      <li><a href="#destaques">Destaques</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5598984853656?text=alora" class="nav-cta">Comprar agora</a>
+  </nav>
+  
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Sua <em>essência</em>,<br>nossa paixão
+      </h1>
+      <p class="hero-subtitle">
+        Perfumes exclusivos, maquiagem premium e acessórios que contam a sua história.
+        Desperte o melhor de você com a Flora Boutique.
+      </p>
+     
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ───────────────────────────────────────────── -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span class="marquee-item">Perfumes Importados</span>
+      <span class="marquee-item">Maquiagem Premium</span>
+      <span class="marquee-item">Acessórios Exclusivos</span>
+      <span class="marquee-item">Atacado e Varejo</span>
+      <span class="marquee-item">Frete para toda São luís</span>
+      <span class="marquee-item">Produtos Originais</span>
+      <span class="marquee-item">Perfumes Importados</span>
+      <span class="marquee-item">Maquiagem Premium</span>
+      <span class="marquee-item">Acessórios Exclusivos</span>
+      <span class="marquee-item">Atacado e Varejo</span>
+      <span class="marquee-item">Frete para Toda são luís</span>
+      <span class="marquee-item">Produtos Originais</span>
+    </div>
+  </div>
+
+  <!-- ── CATEGORIES ───────────────────────────────────────── -->
+  <section class="categories" id="categorias">
+    <div class="section-header reveal">
+      <h2 class="section-title">Nossas <em>categorias</em></h2>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card reveal">
+        <div class="cat-perfume">
+          <img src="ft.img/perfume2.jpg">
+        </div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="cat-name">Perfumes</span>
+          <span class="cat-count">Fragrâncias importadas</span>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card reveal reveal-delay-1">
+        <div class="cat-maquiagem">
+          <img src="ft.img/download.jpg">
+        </div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="cat-name">Maquiagem</span>
+          <span class="cat-count">Looks que encantam</span>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+      <div class="cat-card reveal reveal-delay-2">
+        <div class="cat-acessorios">
+          <img src="ft.img/acessorio.jpg">
+        </div>
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="cat-name">Acessórios</span>
+          <span class="cat-count">Detalhes que fazem a diferença</span>
+        </div>
+        <div class="cat-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED PRODUCTS ────────────────────────────────── -->
+  <section class="featured" id="destaques">
+    <div class="section-header reveal">
+      <span class="section-eyebrow1">Os mais amados</span>
+      <h2 class="section-title2"><em>Destaques</em> da semana</h2>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card reveal">
+        <div class="product-featured">
+          <img src="ft.img/D_NQ_NP_724493-MLB108953093963_032026-O.jpg" alt="perfumecopa">
+          <span class="product-badge">Novo</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">La Vie est Belle</div>
+          <div class="product-brand">Lancôme</div>
+          <div class="product-footer">
+            <span class="product-price">R$ 329</span>
+            <button class="product-add" onclick="openWhatsApp('La Vie est Belle')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-featured">
+          <img src="ft.img/WhatsApp Image 2026-06-12 at 13.42.55.jpeg" alt="cebola">
+          <span class="product-badge">Favorito</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Black Opium</div>
+          <div class="product-brand">Yves Saint Laurent</div>
+          <div class="product-footer">
+            <span class="product-price">R$ 419</span>
+            <button class="product-add" onclick="openWhatsApp('Black Opium')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal">
+        <div class="product-featured">
+          <img src="ft.img/WhatsApp Image 2026-06-12 at 14.17.32.jpeg" alt="labios">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Kit Lábios Perfeitos</div>
+          <div class="product-brand">Coleção Flora</div>
+          <div class="product-footer">
+            <span class="product-price">R$ 89</span>
+            <button class="product-add" onclick="openWhatsApp('Kit Lábios Perfeitos')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal reveal">
+        <div class="product-featured">
+          <img src="ft.img/WhatsApp Image 2026-06-12 at 14.20.30.jpeg" alt="colar">
+          <span class="product-badge">Oferta</span>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Colar Dourado Flora</div>
+          <div class="product-brand">Exclusivo</div>
+          <div class="product-footer">
+            <span class="product-price">R$ 149</span>
+            <button class="product-add" onclick="openWhatsApp('Colar Dourado Flora')">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── HIGHLIGHT ─────────────────────────────────────────── -->
+  <section class="highlight" id="sobre">
+    <div class="highlight-inner">
+      <div class="highlight-visual reveal">
+        <div class="highlight-circle">🌸</div>
+        <div class="highlight-tag">Lançamento</div>
+      </div>
+      <div class="highlight-content reveal reveal-delay-1">
+        <span class="section-eyebrow2">Perfume da estação</span>
+        <h2 class="highlight-title">Flor de <em>Primavera</em> — Edição Limitada</h2>
+        <p class="highlight-text">
+          Uma fragrância que celebra a feminilidade e a leveza. Notas florais que persistem
+          ao longo do dia, deixando um rastro inconfundível de elegância.
+        </p>
+        <div class="highlight-notes">
+          <span class="note-pill">Rosa</span>
+          <span class="note-pill">Jasmim</span>
+          <span class="note-pill">Baunilha</span>
+          <span class="note-pill">Âmbar</span>
+        </div>
+        <div class="highlight-price">
+          <small>A partir de</small>
+          R$ 189,00
+        </div>
+        <a href="https://wa.me/5598984853656?text=Boa%20noite" class="btn-primary">
+          Quero este perfume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ────────────────────────────────────────
+  <section class="testimonials">
+    <div class="section-header reveal">
+      <span class="section-eyebrow3">Quem nos escolhe</span>
+      <h2 class="section-title2">Amor de <em>clientes</em></h2>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Os perfumes são originais e chegaram super rápido. A embalagem é linda e o atendimento foi incrível. Já fiz meu segundo pedido!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AM</div>
+          <div>
+            <div class="reviewer-name">Ana Martins</div>
+            <div class="reviewer-city">São Luís, MA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Comprei no atacado para revender e fui super bem atendida. Produtos de qualidade e preço justo. Recomendo demais a Flora Boutique!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">CR</div>
+          <div>
+            <div class="reviewer-name">Camila Rocha</div>
+            <div class="reviewer-city">Teresina, PI</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"A maquiagem é de ótima qualidade! A base durou o dia todo e o batom é lindo. Vou com certeza comprar mais. Amei tudo!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JS</div>
+          <div>
+            <div class="reviewer-name">Juliana Silva</div>
+            <div class="reviewer-city">Fortaleza, CE</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  -->
+
+  <!-- ── NEWSLETTER ────────────────────────────────────────── -->
+  <section class="newsletter" id="contato">
+    <div class="newsletter-content reveal">
+      <span class="section-eyebrow4">Fique por dentro</span>
+      <h2 class="newsletter-title">Receba novidades<br>em primeira mão</h2>
+      <p class="newsletter-text">Promoções exclusivas, lançamentos e dicas de beleza diretamente no seu WhatsApp.</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" id="email-input">
+        <button class="newsletter-btn" onclick="handleNewsletter()">Quero receber</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="WhatsApp_Image_2026-06-08_at_22_37_26.jpeg" alt="Flora Boutique" onerror="this.style.display='none'">
+          <span class="footer-logo-name">Flora Boutique</span>
+        </div>
+        <p class="footer-desc">
+          Perfumes, maquiagem e acessórios premium para quem valoriza elegância e qualidade.
+          Atendemos no varejo e atacado em todo o Brasil.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">ig</a>
+          <a href="https://wa.me/5598984853656?text=Boa%20noite" class="social-btn">w</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="#">Perfumes</a></li>
+          <li><a href="#">Maquiagem</a></li>
+          <li><a href="#">Acessórios</a></li>
+          <li><a href="#">Kits Especiais</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Atacado</a></li>
+          <li><a href="#">Revendedoras</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="https://wa.me/5598984853656?text=Boa%20noite">WhatsApp</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Rastreio de Pedido</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Flora Boutique — Atacado e Varejo. Todos os direitos reservados.</p>
+      <div class="footer-payment">
+        <span class="pay-badge">PIX</span>
+        <span class="pay-badge">CRÉDITO</span>
+        <span class="pay-badge">BOLETO</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WHATSAPP FAB ──────────────────────────────────────── -->
+  <a href="https://wa.me/5598984853656" class="whatsapp-btn" target="_blank" title="Fale no WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+></html>
