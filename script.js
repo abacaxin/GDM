@@ -4,6 +4,26 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('floraTheme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  if (themeToggle) themeToggle.classList.toggle('active', theme === 'light');
+  localStorage.setItem('floraTheme', theme);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+    applyTheme(nextTheme);
+  });
+}
+
+applyTheme(initialTheme);
+
 // ── Scroll reveal com IntersectionObserver ────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
