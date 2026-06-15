@@ -123,4 +123,31 @@ if (track && btnPrev && btnNext) {
       resumeTimer = setTimeout(resumeAnimation, 4000);
     });
   });
+
+  // ── Lightbox do carrossel ─────────────────────────────────────────────────────
+const overlay     = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const closeBtn    = document.getElementById('lightboxClose');
+
+document.getElementById('carouselTrack').addEventListener('click', e => {
+  const img = e.target.closest('.carousel-card img');
+  if (!img) return;
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+
+function closeLightbox() {
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) closeLightbox();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
 }
