@@ -47,3 +47,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+// ── Carrossel de fotos ────────────────────────────────────────────────────────
+const track = document.getElementById('carouselTrack');
+const btnPrev = document.getElementById('btnPrev');
+const btnNext = document.getElementById('btnNext');
+
+if (track && btnPrev && btnNext) {
+  const CARD_WIDTH = 280 + 20;
+  let manualOffset = 0;
+
+  function getCurrentAnimatedX() {
+    const style = window.getComputedStyle(track);
+    const matrix = new WebKitCSSMatrix(style.transform);
+    return matrix.m41;
+  }
+
+  function pauseAnimation() {
+    const currentX = getCurrentAnimatedX();
+    track.style.animation = 'none';
+    track.style.transform = `translateX(${currentX}px)`;
+    manualOffset = currentX;
+  }
+
+  function resumeAnimation() {
+    track.style.animation = '';
+    track.style.transform = '';
+    manualOffset = 0;
+  }
+
+  btnNext.addEventListener('click', () => {
+    pauseAnimation();
+    manualOffset -= CARD_WIDTH;
+    const halfWidth = track.scrollWidth / 2;
+    if (Math.abs(manualOffset) >= halfWidth) manualOffset = 0;
+    track.style.transform = `translateX(${manualOffset}px)`;
+    track.style.transition = 'transform 0.45s ease';
+    setTimeout(() => { track.style.transition = ''; }, 460);
+  });
+
+  btnPrev.addEventListener('click', () => {
+    pauseAnimation();
+    manualOffset += CARD_WIDTH;
+    if (manualOffset > 0) manualOffset = -(track.scrollWidth / 2 - CARD_WIDTH);
+    track.style.transform = `translateX(${manualOffset}px)`;
+    track.style.transition = 'transform 0.45s ease';
+    setTimeout(() => { track.style.transition = ''; }, 460);
+  });
+
+  let resumeTimer;
+  [btnPrev, btnNext].forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(resumeAnimation, 4000);
+    });
+  });
+}
