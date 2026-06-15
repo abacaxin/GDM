@@ -283,6 +283,16 @@ nav.scrolled {
   justify-content: center;
 }
 
+.section-header-car {
+  display: flex;
+  flex-direction: column; /* mantém span e h2 um abaixo do outro */
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center; /* alinha à esquerda */
+  text-align: justify;
+  padding-top: 50px;
+  justify-content: center;
+}
+
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(55px,200px,3rem);
@@ -1164,18 +1174,23 @@ footer {
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-left: 40%;
+  text-transform: uppercase;    
   color: var(--gold);
   margin-bottom: 1rem;
   display: block;
+  align-items: center; 
+  display: flex;
+
 }
 .section-title7 {
-    font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
   line-height: 1.2;
   color: var(--cream);
+  margin-bottom: 50px;
+  margin-left: 05%;
+  width: 100%;
 }
 .section-title7 em {
   font-style: italic; color: var(--gold); 
