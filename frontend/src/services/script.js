@@ -24,6 +24,41 @@ if (themeToggle) {
 
 applyTheme(initialTheme);
 
+// ── Categorias dropdown ───────────────────────────────────────────────────────
+const categoriasBtn = document.getElementById('categoriasBtn');
+const categoriasDropdown = document.getElementById('categoriasDropdown');
+
+if (categoriasBtn && categoriasDropdown) {
+  let dropdownOpen = false;
+
+  categoriasBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    dropdownOpen = !dropdownOpen;
+    categoriasDropdown.classList.toggle('open', dropdownOpen);
+    categoriasBtn.classList.toggle('active', dropdownOpen);
+    categoriasBtn.setAttribute('aria-expanded', dropdownOpen);
+    categoriasDropdown.setAttribute('aria-hidden', !dropdownOpen);
+  });
+
+  document.addEventListener('click', e => {
+    if (!categoriasBtn.contains(e.target) && !categoriasDropdown.contains(e.target)) {
+      dropdownOpen = false;
+      categoriasDropdown.classList.remove('open');
+      categoriasBtn.classList.remove('active');
+      categoriasBtn.setAttribute('aria-expanded', 'false');
+      categoriasDropdown.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      dropdownOpen = false;
+      categoriasDropdown.classList.remove('open');
+      categoriasBtn.classList.remove('active');
+    }
+  });
+}
+
 // ── Scroll reveal com IntersectionObserver ────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {

@@ -19,17 +19,31 @@
         <img src="../images/flora_logo_inicio.svg" alt="Flora Boutique">
       </a>
     </div>
-    <ul class="nav-links">
-      <li><a href="#categorias">Categorias</a></li>
-      <!-- <li><a href="#destaques">Destaques</a></li> -->
-      <!-- <li><a href="#sobre">Sobre</a></li> -->
-      <!-- <li><a href="#contato">Contato</a></li> -->
-    </ul>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro e escuro">
-      <span class="theme-icon theme-icon--moon">🌙</span>
-      <span class="theme-icon theme-icon--sun">☀️</span>
-      <span class="theme-toggle__circle"></span>
-    </button>
+    <div class="nav-categorias-wrapper">
+      <button class="nav-categorias-btn" id="categoriasBtn" aria-expanded="false" aria-haspopup="true">
+        Categorias
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      <div class="nav-categories-dropdown" id="categoriasDropdown" aria-hidden="true">
+        <ul class="dropdown-list">
+          <li><a href="#"><i class="cat-icon">🌸</i> Perfumes</a></li>
+          <li><a href="#"><i class="cat-icon">💄</i> Maquiagem</a></li>
+          <li><a href="#"><i class="cat-icon">💍</i> Acessórios</a></li>
+          <li><a href="#"><i class="cat-icon">🎁</i> Kits Especiais</a></li>
+          <li><a href="#"><i class="cat-icon">✨</i> Lançamentos</a></li>
+          <li><a href="#"><i class="cat-icon">🏷️</i> Ofertas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="theme-button">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro e escuro">
+        <span class="theme-icon theme-icon--moon">🌙</span>
+        <span class="theme-icon theme-icon--sun">☀️</span>
+        <span class="theme-toggle__circle"></span>
+      </button>
+    </div>
   </nav>
   
   <!-- ── HERO ─────────────────────────────────────────────── -->
